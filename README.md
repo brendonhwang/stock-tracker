@@ -37,18 +37,18 @@ A web application that allows users to search for real-time stock information us
 
 - **Backend Setup:**
 
-- Navigate to the backend directory (if you have one, or just the project root if it's a full-stack repo).
-- Install dependencies: npm install
-- Create a .env file in the root and add your API key: ALPHA_VANTAGE_API_KEY=your_api_key_here
-- Start the backend server: npm start
+    - Navigate to the backend directory (if you have one, or just the project root if it's a full-stack repo).
+    - Install dependencies: npm install
+    - Create a .env file in the root and add your API key: ALPHA_VANTAGE_API_KEY=your_api_key_here
+    - Start the backend server: npm start
 
 - **Frontend Setup:**
 
-- Navigate to the client directory (or wherever your React app is).
-- Install dependencies: npm install
-- Start the frontend app: npm start
-- The app should now be accessible at http://localhost:3000.
+    - Navigate to the client directory (or wherever your React app is).
+    - Install dependencies: npm install
+    - Start the frontend app: npm start
+    - The app should now be accessible at http://localhost:3000.
 
 - **Usage**
-- Enter a stock symbol (e.g., AAPL) in the search bar and click "Search".
-- The app will display real-time stock information from the Alpha Vantage API.
+    - Enter a stock symbol (e.g., AAPL) in the search bar and click "Search".
+    - The app will display real-time stock information from the Alpha Vantage API.
