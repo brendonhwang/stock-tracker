@@ -23,13 +23,14 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <h1>Stock Tracker</h1>
-      <SearchBar onSearch={handleSearch} />
-      {loading && <p>Loading...</p>}
-      {error && <p>{error}</p>}
-      {stockData && <StockCard data={stockData} />}
+    <div className="App" style={{ textAlign: 'center', padding: '20px', fontFamily: 'Arial, sans-serif' }}>
+    <h1>Stock Tracker</h1>
+    <SearchBar onSearch={handleSearch} />
+    {loading && <p>Loading...</p>}
+    {error && <p style={{ color: 'red' }}>{error}</p>}
+    {stockData && <StockCard data={stockData} />}
     </div>
+
   );
 }
 

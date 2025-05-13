@@ -1,31 +1,27 @@
 import React, { useState } from 'react';
+import './SearchBar.css';
 
 function SearchBar({ onSearch }) {
   const [ticker, setTicker] = useState('');
 
-  const handleChange = (e) => {
-    setTicker(e.target.value);
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (ticker.trim()) {
-      onSearch(ticker);
+    if (ticker.trim() !== '') {
+      onSearch(ticker.toUpperCase());
+      setTicker('');
     }
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          value={ticker}
-          onChange={handleChange}
-          placeholder="Enter stock ticker"
-        />
-        <button type="submit">Search</button>
-      </form>
-    </div>
+    <form className="search-bar" onSubmit={handleSubmit}>
+      <input
+        type="text"
+        placeholder="Enter stock symbol (e.g., AAPL)"
+        value={ticker}
+        onChange={(e) => setTicker(e.target.value)}
+      />
+      <button type="submit">Search</button>
+    </form>
   );
 }
 
